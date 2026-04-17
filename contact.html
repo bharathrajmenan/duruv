@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact & Booking | Dhuruv Detailing Studio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cinzel:wght@400;700;900&family=Inter:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="mainNav">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="logo.jpg" alt="Dhuruv Detailing Studio" class="nav-logo-img">
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="shop.html">Services</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <span class="mobile-close" onclick="toggleMenu()">✕</span>
+        <a href="index.html" onclick="toggleMenu()">Home</a>
+        <a href="about.html" onclick="toggleMenu()">About Us</a>
+        <a href="shop.html" onclick="toggleMenu()">Services</a>
+        <a href="gallery.html" onclick="toggleMenu()">Gallery</a>
+        <a href="contact.html" onclick="toggleMenu()">Contact</a>
+    </div>
+
+    <!-- Page Header -->
+    <header class="page-header" style="height: 40vh;">
+        <div class="page-header-bg"
+            style="background-image: url('https://images.unsplash.com/photo-1549399542-7e3f8b79c341?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');">
+        </div>
+        <div class="container" style="position: relative; z-index: 2;">
+            <div class="section-label">Connect With Us</div>
+            <h1 class="bold-title">SECURE YOUR<br><span
+                    style="-webkit-text-stroke:2px var(--clr-accent);color:transparent;">SPOT</span></h1>
+        </div>
+    </header>
+
+    <!-- Contact Grid Section -->
+    <section class="section">
+        <div class="container contact-grid">
+
+            <!-- Left Info panel -->
+            <div class="contact-info-box">
+                <h2 class="section-title">The Studio</h2>
+                <p>Reach out to discuss your vehicle's transformation.</p>
+
+                <div class="contact-item" style="margin-top: 3rem;">
+                    <h4>Visit Us</h4>
+                    <p>No.56A, Tharamani 100 ft Road,<br>Velachery Link Road,<br>Chennai – 600 113</p>
+                </div>
+
+                <div class="contact-item">
+                    <h4>Concierge Direct Line</h4>
+                    <p><a href="tel:9790806404" style="color:inherit;">97908 06404</a><br><a href="tel:9445235706"
+                            style="color:inherit;">94452 35706</a><br><span
+                            style="font-size:0.8rem;color:var(--clr-sub);">(Mon – Sun: 9:00 AM – 8:00 PM)</span></p>
+                </div>
+
+                <div class="contact-item">
+                    <h4>Email Us</h4>
+                    <p><a href="mailto:dhuruvcaraccessories@gmail.com"
+                            style="color:inherit;">dhuruvcaraccessories@gmail.com</a></p>
+                </div>
+
+                <div class="contact-item">
+                    <h4>Website</h4>
+                    <p><a href="https://dhuruvcaraccessories.in" target="_blank"
+                            style="color:var(--clr-accent);">dhuruvcaraccessories.in</a></p>
+                </div>
+
+                <div style="margin-top: 2rem; display:flex; gap:1rem; flex-wrap:wrap;">
+                    <a href="tel:9790806404" class="btn btn-primary">Call Now</a>
+                    <a href="mailto:dhuruvcaraccessories@gmail.com" class="btn btn-ghost">Email Us</a>
+                </div>
+            </div>
+
+            <!-- Right Custom Form panel -->
+            <div class="google-form-wrapper">
+                <h2 class="section-title" style="font-size: 2rem;">Service Inquiry Form</h2>
+                <p style="margin-bottom: 2rem;">Fill in your details below and our team will get back to you promptly.</p>
+
+                <!-- Success message (hidden by default) -->
+                <div id="formSuccess" style="display:none; background:rgba(255,69,0,0.1); border:1px solid rgba(255,69,0,0.4); border-radius:4px; padding:1.5rem 2rem; margin-bottom:2rem; text-align:center;">
+                    <div style="font-size:2rem; margin-bottom:0.5rem;">✅</div>
+                    <h4 style="color:var(--clr-accent); margin-bottom:0.4rem;">Inquiry Received!</h4>
+                    <p style="color:var(--clr-sub); font-size:0.9rem;">Thank you! Our team will contact you within 24 hours.</p>
+                </div>
+
+                <form id="inquiryForm" novalidate>
+
+                    <div class="cform-row">
+                        <div class="cform-group">
+                            <label class="cform-label" for="cf-name">Full Name <span style="color:var(--clr-accent);">*</span></label>
+                            <input class="cform-input" type="text" id="cf-name" name="cf-name" placeholder="e.g. Rajesh Kumar" required>
+                        </div>
+                        <div class="cform-group">
+                            <label class="cform-label" for="cf-phone">Phone Number <span style="color:var(--clr-accent);">*</span></label>
+                            <input class="cform-input" type="tel" id="cf-phone" name="cf-phone" placeholder="e.g. 9790806404" required>
+                        </div>
+                    </div>
+
+                    <div class="cform-group">
+                        <label class="cform-label" for="cf-email">Email Address</label>
+                        <input class="cform-input" type="email" id="cf-email" name="cf-email" placeholder="e.g. yourname@email.com">
+                    </div>
+
+                    <div class="cform-group">
+                        <label class="cform-label" for="cf-car">Car Model &amp; Year</label>
+                        <input class="cform-input" type="text" id="cf-car" name="cf-car" placeholder="e.g. Hyundai Creta 2023">
+                    </div>
+
+                    <div class="cform-group">
+                        <label class="cform-label" for="cf-service">Service Required <span style="color:var(--clr-accent);">*</span></label>
+                        <select class="cform-input cform-select" id="cf-service" name="cf-service" required>
+                            <option value="" disabled selected>Select a service…</option>
+                            <optgroup label="Protection &amp; Coatings">
+                                <option>Ceramic Coating</option>
+                                <option>Graphene Coating</option>
+                                <option>Nano Ceramic</option>
+                                <option>Nano Ceramic Sunfilm</option>
+                                <option>Paint Protection Film (PPF)</option>
+                            </optgroup>
+                            <optgroup label="Detailing Services">
+                                <option>Car Detailing (Interior / Exterior)</option>
+                                <option>Exterior Polishing &amp; Waxing</option>
+                                <option>Engine Bay Cleaning</option>
+                                <option>Headlight Restoration</option>
+                                <option>Windshield &amp; Glass Polishing</option>
+                                <option>Salt Deposit Removal</option>
+                            </optgroup>
+                            <optgroup label="Accessories">
+                                <option>Infotainment &amp; Audio System</option>
+                                <option>Car Seat Covers &amp; Interior</option>
+                                <option>Car Illumination (LED / HID / Ambient)</option>
+                                <option>Security Systems &amp; Dashcams</option>
+                                <option>Performance &amp; Styling Enhancements</option>
+                                <option>Travel &amp; Utility Accessories</option>
+                            </optgroup>
+                            <option>Other / General Inquiry</option>
+                        </select>
+                    </div>
+
+                    <div class="cform-group">
+                        <label class="cform-label" for="cf-message">Additional Message</label>
+                        <textarea class="cform-input cform-textarea" id="cf-message" name="cf-message" placeholder="Any specific requirements, preferred appointment time, or questions…" rows="4"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary" style="width:100%; font-size:1rem; margin-top:0.5rem;" id="cf-submit">
+                        Send Inquiry
+                    </button>
+
+                </form>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section style="padding-bottom: 7rem;">
+        <div class="container">
+            <div class="section-label" style="justify-content:center;">Location</div>
+            <h2 class="section-title" style="font-size: 2rem; margin-bottom: 2rem; text-align: center;">Get Directions
+            </h2>
+            <div style="border: 1px solid var(--clr-border); filter: invert(100%) hue-rotate(180deg) brightness(85%) contrast(120%); opacity: 0.85; transition: opacity 0.4s ease;"
+                onmouseover="this.style.opacity=1" onmouseout="this.style.opacity=0.85">
+                <iframe width="100%" height="500" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+                    src="https://maps.google.com/maps?q=No.56A+Tharamani+100+ft+Road+Velachery+Link+Road+Chennai+600+113&t=&z=15&ie=UTF8&iwloc=&output=embed">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html">
+                        <img src="logo.jpg" alt="Dhuruv Detailing Studio" class="footer-logo-img">
+                    </a>
+                    <p>Chennai's most premium automotive detailing studio. Where perfection meets passion, every single
+                        time.</p>
+                </div>
+                <div class="footer-nav">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="shop.html">Services</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact</h4>
+                    <p>No.56A, Tharamani 100 ft Road,<br>Velachery Link Road,<br>Chennai – 600 113</p>
+                    <p style="margin-top:0.6rem;"><a href="tel:9790806404" style="color:var(--clr-sub);">97908 06404</a>
+                        &nbsp;|&nbsp; <a href="tel:9445235706" style="color:var(--clr-sub);">94452 35706</a></p>
+                    <p style="margin-top:0.4rem;"><a href="mailto:dhuruvcaraccessories@gmail.com"
+                            style="color:var(--clr-sub);">dhuruvcaraccessories@gmail.com</a></p>
+                    <p style="margin-top:0.4rem;"><a href="https://dhuruvcaraccessories.in" target="_blank"
+                            style="color:var(--clr-accent);">dhuruvcaraccessories.in</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Dhuruv Detailing Studio. All rights reserved.</p>
+                <!-- <p>Arrive Ordinary. Depart Exceptional. ✨</p> -->
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // ─── Navbar scroll ───
+        const nav = document.getElementById('mainNav');
+        window.addEventListener('scroll', () => {
+            nav.classList.toggle('scrolled', window.scrollY > 60);
+        });
+
+        // ─── Mobile menu ───
+        function toggleMenu() {
+            document.getElementById('mobileMenu').classList.toggle('open');
+        }
+
+        // ─── Contact Form → Google Forms submission ───
+        // HOW TO CONNECT YOUR GOOGLE FORM:
+        // 1. Open your Google Form and click the 3-dot menu → "Get pre-filled link"
+        // 2. Fill each field with a dummy value and click "Get Link"
+        // 3. The URL will contain entry.XXXXXXXXX=value for each field
+        // 4. Replace the entry IDs below with your actual field entry IDs
+        const GOOGLE_FORM_ACTION = 'https://docs.google.com/forms/d/e/1FAIpQLSc6a0PsSw5KW7AsjZsPNHAeyr3zEGMCSs30lMapwQHVJMAX_w/formResponse';
+        const FIELD_IDS = {
+            name:    'entry.1000000001',   // Replace with your Name field entry ID
+            phone:   'entry.1000000002',   // Replace with your Phone field entry ID
+            email:   'entry.1000000003',   // Replace with your Email field entry ID
+            car:     'entry.1000000004',   // Replace with your Car Model field entry ID
+            service: 'entry.1000000005',   // Replace with your Service field entry ID
+            message: 'entry.1000000006'    // Replace with your Message field entry ID
+        };
+
+        document.getElementById('inquiryForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            const btn = document.getElementById('cf-submit');
+            const form = this;
+
+            // Basic validation
+            const name    = document.getElementById('cf-name').value.trim();
+            const phone   = document.getElementById('cf-phone').value.trim();
+            const service = document.getElementById('cf-service').value;
+            if (!name || !phone || !service) {
+                alert('Please fill in your Name, Phone Number, and Service Required.');
+                return;
+            }
+
+            btn.textContent = 'Sending…';
+            btn.disabled = true;
+
+            // Build form data
+            const body = new FormData();
+            body.append(FIELD_IDS.name,    name);
+            body.append(FIELD_IDS.phone,   phone);
+            body.append(FIELD_IDS.email,   document.getElementById('cf-email').value.trim());
+            body.append(FIELD_IDS.car,     document.getElementById('cf-car').value.trim());
+            body.append(FIELD_IDS.service, service);
+            body.append(FIELD_IDS.message, document.getElementById('cf-message').value.trim());
+
+            // Submit silently (no-cors — Google Forms receives data, CORS error is expected & harmless)
+            try {
+                await fetch(GOOGLE_FORM_ACTION, { method: 'POST', body: body, mode: 'no-cors' });
+            } catch (_) { /* no-cors always throws, that's normal */ }
+
+            // Show success state
+            form.style.display = 'none';
+            document.getElementById('formSuccess').style.display = 'block';
+        });
+    </script>
+</body>
+
+</html>

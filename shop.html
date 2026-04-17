@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services | Dhuruv Detailing Studio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cinzel:wght@400;700;900&family=Inter:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="mainNav">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="logo.jpg" alt="Dhuruv Detailing Studio" class="nav-logo-img">
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="shop.html" class="active">Services</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <span class="mobile-close" onclick="toggleMenu()">✕</span>
+        <a href="index.html" onclick="toggleMenu()">Home</a>
+        <a href="about.html" onclick="toggleMenu()">About Us</a>
+        <a href="shop.html" onclick="toggleMenu()">Services</a>
+        <a href="gallery.html" onclick="toggleMenu()">Gallery</a>
+        <a href="contact.html" onclick="toggleMenu()">Contact</a>
+    </div>
+
+    <!-- Page Header -->
+    <header class="page-header" style="height: 50vh;">
+        <div class="page-header-bg"
+            style="background-image: url('https://images.unsplash.com/photo-1626694765620-80eaadffad5a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');">
+        </div>
+        <div class="container" style="position: relative; z-index: 2;">
+            <div class="section-label">Our Services</div>
+            <h1 class="bold-title">PREMIUM<br><span
+                    style="-webkit-text-stroke:2px var(--clr-accent);color:transparent;">OFFERINGS</span></h1>
+        </div>
+    </header>
+
+    <!-- ═══════════════════════════════════════════
+         SECTION 1 — PROTECTION & COATINGS
+    ════════════════════════════════════════════ -->
+    <section class="section">
+        <div class="container">
+            <div style="text-align:center; margin-bottom: 3.5rem;">
+                <div class="section-label" style="justify-content:center;">Premium Protection</div>
+                <h2 class="section-title">Paint Protection &amp; Coatings</h2>
+                <p style="max-width:650px; margin:0 auto;">Advanced protection technologies that shield, preserve, and
+                    enhance your vehicle's finish to world-class standards.</p>
+            </div>
+
+            <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap:1.5rem;">
+
+                <!-- PPF -->
+                <div class="svc-card">
+                    <div class="svc-icon-wrap">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--clr-accent)"
+                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                        </svg>
+                    </div>
+                    <div class="svc-num">01</div>
+                    <h3 class="svc-title">Paint Protection Film (PPF)</h3>
+                    <p class="svc-desc">Self-healing TPU film that guards your paint against stone chips, scratches, UV
+                        rays, and contaminants — invisible yet indestructible protection.</p>
+                    <a href="contact.html" class="svc-link">Get a Quote →</a>
+                </div>
+
+                <!-- Ceramic Coating -->
+                <div class="svc-card">
+                    <div class="svc-icon-wrap">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--clr-accent)"
+                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10" />
+                            <path d="M12 8v4l3 3" />
+                        </svg>
+                    </div>
+                    <div class="svc-num">02</div>
+                    <h3 class="svc-title">Ceramic Coating</h3>
+                    <p class="svc-desc">9H nano-ceramic bonding that delivers mirror-like gloss, hydrophobic repellency,
+                        and long-lasting chemical resistance — the gold standard in paint protection.</p>
+                    <a href="contact.html" class="svc-link">Get a Quote →</a>
+                </div>
+
+                <!-- Nano Ceramic -->
+                <div class="svc-card">
+                    <div class="svc-icon-wrap">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--clr-accent)"
+                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5 12 2" />
+                            <line x1="12" y1="22" x2="12" y2="15.5" />
+                            <polyline points="22 8.5 12 15.5 2 8.5" />
+                        </svg>
+                    </div>
+                    <div class="svc-num">03</div>
+                    <h3 class="svc-title">Nano Ceramic</h3>
+                    <p class="svc-desc">Ultra-thin nano-ceramic layers offering superior gloss enhancement, UV
+                        protection, and water-beading performance for everyday protection at a premium finish.</p>
+                    <a href="contact.html" class="svc-link">Get a Quote →</a>
+                </div>
+
+                <!-- Sunfilm -->
+                <div class="svc-card">
+                    <div class="svc-icon-wrap">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--clr-accent)"
+                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="5" />
+                            <line x1="12" y1="1" x2="12" y2="3" />
+                            <line x1="12" y1="21" x2="12" y2="23" />
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                            <line x1="1" y1="12" x2="3" y2="12" />
+                            <line x1="21" y1="12" x2="23" y2="12" />
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+                        </svg>
+                    </div>
+                    <div class="svc-num">04</div>
+                    <h3 class="svc-title">Nano Ceramic Sunfilm</h3>
+                    <p class="svc-desc">Premium infrared-rejection window films that block up to 99% UV rays,
+                        significantly reduce cabin heat, and deliver a sleek, dark aesthetic.</p>
+                    <a href="contact.html" class="svc-link">Get a Quote →</a>
+                </div>
+
+                <!-- Graphene Coating -->
+                <div class="svc-card">
+                    <div class="svc-icon-wrap">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--clr-accent)"
+                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z" />
+                            <path d="M2 17l10 5 10-5" />
+                            <path d="M2 12l10 5 10-5" />
+                        </svg>
+                    </div>
+                    <div class="svc-num">05</div>
+                    <h3 class="svc-title">Graphene Coating</h3>
+                    <p class="svc-desc">Next-generation graphene-infused coating offering superior heat dissipation,
+                        anti-static properties, and an ultra-slick surface that outlasts conventional ceramic coatings.
+                    </p>
+                    <a href="contact.html" class="svc-link">Get a Quote →</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         GRAND LAUNCH OFFER — PRICING
+    ════════════════════════════════════════════ -->
+    <section class="section"
+        style="background: linear-gradient(135deg, rgba(8,8,8,0.99) 0%, rgba(20,10,5,0.99) 100%); border-top:2px solid rgba(255,69,0,0.35); border-bottom:2px solid rgba(255,69,0,0.35); position:relative; overflow:hidden;">
+        <div
+            style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:600px;height:600px;background:radial-gradient(circle,rgba(255,69,0,0.07) 0%,transparent 70%);pointer-events:none;">
+        </div>
+        <div class="container" style="position:relative;z-index:2;">
+            <div style="text-align:center; margin-bottom:3.5rem;">
+                <div class="section-label" style="justify-content:center; color:var(--clr-accent);">Grand Launch Offer
+                </div>
+                <h2 class="section-title">Starts From</h2>
+                <p style="max-width:600px; margin:0 auto;">Limited-time launch pricing — book now &amp; lock in your
+                    rate before it changes.</p>
+            </div>
+
+            <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap:1.5rem;">
+
+                <!-- Ceramic Coating -->
+                <div class="svc-acc-card">
+                    <div class="svc-acc-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--clr-accent)"
+                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10" />
+                            <path d="M12 8v4l3 3" />
+                        </svg>
+                    </div>
+                    <h3>Ceramic Coating</h3>
+                    <div style="margin:1rem 0; display:flex; align-items:baseline; gap:0.3rem;">
+                        <span
+                            style="font-size:0.78rem; color:var(--clr-sub); text-transform:uppercase; letter-spacing:1px;">Starts
+                            From</span>
+                        <span
+                            style="font-family:var(--font-display); font-size:2.2rem; color:var(--clr-accent); line-height:1;">&#8377;9,999</span>
+                        <span style="color:var(--clr-sub); font-size:0.9rem;">/-</span>
+                    </div>
+                    <ul
+                        style="list-style:none; padding:0; margin:0 0 1.5rem; display:flex; flex-direction:column; gap:0.5rem;">
+                        <li
+                            style="font-size:0.85rem; color:var(--clr-sub); display:flex; align-items:center; gap:0.5rem;">
+                            <span style="color:var(--clr-accent);">&#10003;</span> 9H Nano-Ceramic Protection</li>
+                        <li
+                            style="font-size:0.85rem; color:var(--clr-sub); display:flex; align-items:center; gap:0.5rem;">
+                            <span style="color:var(--clr-accent);">&#10003;</span> Hydrophobic Water Repellency</li>
+                        <li
+                            style="font-size:0.85rem; color:var(--clr-sub); display:flex; align-items:center; gap:0.5rem;">
+                            <span style="color:var(--clr-accent);">&#10003;</span> UV &amp; Chemical Resistance</li>
+                        <li
+                            style="font-size:0.85rem; color:var(--clr-sub); display:flex; align-items:center; gap:0.5rem;">
+                            <span style="color:var(--clr-accent);">&#10003;</span> Mirror-Like Gloss Finish</li>
+                    </ul>
+                    <a href="contact.html" class="btn btn-secondary" style="width:100%; text-align:center;">Book Now</a>
+                </div>
+
+                <!-- Graphene Coating -->
+                <div class="svc-acc-card"
+                    style="border-color:rgba(255,69,0,0.4); box-shadow:0 0 40px rgba(255,69,0,0.12); position:relative;">
+                    <div
+                        style="position:absolute; top:-1px; left:50%; transform:translateX(-50%); background:var(--clr-accent); color:#000; font-size:0.7rem; font-weight:700; letter-spacing:2px; text-transform:uppercase; padding:0.3rem 1.2rem; white-space:nowrap;">
+                        Most Popular</div>
+                    <div class="svc-acc-icon" style="margin-top:1.5rem;">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--clr-accent)"
+                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z" />
+                            <path d="M2 17l10 5 10-5" />
+                            <path d="M2 12l10 5 10-5" />
+                        </svg>
+                    </div>
+                    <h3>Graphene Coating</h3>
+                    <div style="margin:1rem 0; display:flex; align-items:baseline; gap:0.3rem;">
+                        <span
+                            style="font-size:0.78rem; color:var(--clr-sub); text-transform:uppercase; letter-spacing:1px;">Starts
+                            From</span>
+                        <span
+                            style="font-family:var(--font-display); font-size:2.2rem; color:var(--clr-accent); line-height:1;">&#8377;14,999</span>
+                        <span style="color:var(--clr-sub); font-size:0.9rem;">/-</span>
+                    </div>
+                    <ul
+                        style="list-style:none; padding:0; margin:0 0 1.5rem; display:flex; flex-direction:column; gap:0.5rem;">
+                        <li
+                            style="font-size:0.85rem; color:var(--clr-sub); display:flex; align-items:center; gap:0.5rem;">
+                            <span style="color:var(--clr-accent);">&#10003;</span> Next-Gen Graphene Technology</li>
+                        <li
+                            style="font-size:0.85rem; color:var(--clr-sub); display:flex; align-items:center; gap:0.5rem;">
+                            <span style="color:var(--clr-accent);">&#10003;</span> Superior Heat Dissipation</li>
+                        <li
+                            style="font-size:0.85rem; color:var(--clr-sub); display:flex; align-items:center; gap:0.5rem;">
+                            <span style="color:var(--clr-accent);">&#10003;</span> Anti-Static Properties</li>
+                        <li
+                            style="font-size:0.85rem; color:var(--clr-sub); display:flex; align-items:center; gap:0.5rem;">
+                            <span style="color:var(--clr-accent);">&#10003;</span> Outlasts Standard Ceramic</li>
+                    </ul>
+                    <a href="contact.html" class="btn btn-primary" style="width:100%; text-align:center;">Book Now</a>
+                </div>
+
+                <!-- PPF -->
+                <div class="svc-acc-card">
+                    <div class="svc-acc-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--clr-accent)"
+                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                        </svg>
+                    </div>
+                    <h3>Paint Protection Film (PPF)</h3>
+                    <div style="margin:1rem 0; display:flex; align-items:baseline; gap:0.3rem;">
+                        <span
+                            style="font-size:0.78rem; color:var(--clr-sub); text-transform:uppercase; letter-spacing:1px;">Starts
+                            From</span>
+                        <span
+                            style="font-family:var(--font-display); font-size:2.2rem; color:var(--clr-accent); line-height:1;">&#8377;49,999</span>
+                        <span style="color:var(--clr-sub); font-size:0.9rem;">/-</span>
+                    </div>
+                    <ul
+                        style="list-style:none; padding:0; margin:0 0 1.5rem; display:flex; flex-direction:column; gap:0.5rem;">
+                        <li
+                            style="font-size:0.85rem; color:var(--clr-sub); display:flex; align-items:center; gap:0.5rem;">
+                            <span style="color:var(--clr-accent);">&#10003;</span> Self-Healing TPU Film</li>
+                        <li
+                            style="font-size:0.85rem; color:var(--clr-sub); display:flex; align-items:center; gap:0.5rem;">
+                            <span style="color:var(--clr-accent);">&#10003;</span> Stone Chip &amp; Scratch Guard</li>
+                        <li
+                            style="font-size:0.85rem; color:var(--clr-sub); display:flex; align-items:center; gap:0.5rem;">
+                            <span style="color:var(--clr-accent);">&#10003;</span> Invisible Paint Shield</li>
+                        <li
+                            style="font-size:0.85rem; color:var(--clr-sub); display:flex; align-items:center; gap:0.5rem;">
+                            <span style="color:var(--clr-accent);">&#10003;</span> Full / Partial Coverage</li>
+                    </ul>
+                    <a href="contact.html" class="btn btn-secondary" style="width:100%; text-align:center;">Book Now</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         SECTION 2 — CAR DETAILING SERVICES
+    ════════════════════════════════════════════ -->
+    <section class="section"
+        style="background: linear-gradient(135deg, rgba(10,10,10,0.98) 0%, rgba(18,18,18,0.98) 100%); border-top:1px solid rgba(255,69,0,0.12); border-bottom:1px solid rgba(255,69,0,0.12);">
+        <div class="container">
+            <div style="text-align:center; margin-bottom:3.5rem;">
+                <div class="section-label" style="justify-content:center;">Expert Care</div>
+                <h2 class="section-title">Our Detailing Services</h2>
+                <p style="max-width:650px; margin:0 auto;">Comprehensive detailing solutions that restore, rejuvenate,
+                    and perfect every inch of your vehicle inside and out.</p>
+            </div>
+
+            <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap:1.2rem;">
+
+                <div class="svc-detail-card">
+                    <div class="svc-detail-icon">
+                        <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="var(--clr-accent)"
+                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M19 17H5c-1.1 0-2-.9-2-2V7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v8c0 1.1-.9 2-2 2z" />
+                            <path d="M12 17v4" />
+                            <path d="M8 21h8" />
+                            <circle cx="12" cy="12" r="1" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h4>Car Detailing</h4>
+                        <p>Full interior &amp; exterior deep-clean — steam cleaning, leather conditioning, vacuuming,
+                            and odour elimination for a showroom-fresh finish.</p>
+                    </div>
+                </div>
+
+                <div class="svc-detail-card">
+                    <div class="svc-detail-icon">
+                        <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="var(--clr-accent)"
+                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="5" />
+                            <path
+                                d="M12 2v2M12 20v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M2 12h2M20 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h4>Exterior Polishing</h4>
+                        <p>Multi-stage machine polishing eliminating swirl marks, oxidation, and light scratches to
+                            restore your paint to its original brilliance.</p>
+                    </div>
+                </div>
+
+                <div class="svc-detail-card">
+                    <div class="svc-detail-icon">
+                        <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="var(--clr-accent)"
+                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h4>Engine Bay Detailing</h4>
+                        <p>Thorough degreasing and detailing of the engine bay, leaving it spotless, protected, and
+                            visually impressive.</p>
+                    </div>
+                </div>
+
+                <div class="svc-detail-card">
+                    <div class="svc-detail-icon">
+                        <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="var(--clr-accent)"
+                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <ellipse cx="12" cy="5" rx="9" ry="3" />
+                            <path d="M3 5v4c0 1.66 4.03 3 9 3s9-1.34 9-3V5" />
+                            <path d="M3 9v4c0 1.66 4.03 3 9 3s9-1.34 9-3V9" />
+                            <path d="M3 13v4c0 1.66 4.03 3 9 3s9-1.34 9-3v-4" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h4>Headlight Restoration</h4>
+                        <p>Professional wet sanding and polishing to remove yellowing, cloudiness, and oxidation —
+                            restoring clarity and road safety.</p>
+                    </div>
+                </div>
+
+                <div class="svc-detail-card">
+                    <div class="svc-detail-icon">
+                        <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="var(--clr-accent)"
+                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M3 3l18 18" />
+                            <path d="M10.5 10.677a2 2 0 0 0 2.823 2.823" />
+                            <path
+                                d="M7.362 7.561C5.68 8.74 4.279 10.42 3 12c1.889 2.991 5.282 6 9 6 1.55 0 3.043-.523 4.395-1.35" />
+                            <path
+                                d="M19.075 16.802C20.651 15.5 22 13.54 22.999 12c-1.889-2.991-5.282-6-9.999-6-1.14 0-2.24.239-3.272.673" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h4>Tar Removal</h4>
+                        <p>Safe chemical and mechanical removal of tar spots, road fallout, and industrial contamination
+                            without harming your paintwork.</p>
+                    </div>
+                </div>
+
+                <div class="svc-detail-card">
+                    <div class="svc-detail-icon">
+                        <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="var(--clr-accent)"
+                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="4" width="20" height="16" rx="2" />
+                            <path d="M12 4v16" />
+                            <path d="M2 12h20" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h4>Windshield &amp; Glass Polishing</h4>
+                        <p>Removal of water stains, wiper marks, and fine scratches from all glass surfaces — restoring
+                            crystal-clear visibility.</p>
+                    </div>
+                </div>
+
+                <div class="svc-detail-card">
+                    <div class="svc-detail-icon">
+                        <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="var(--clr-accent)"
+                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M2 12c.6.5 1.2 1 2.5 1C7 13 7 11 9.5 11c2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1" />
+                            <path
+                                d="M2 17c.6.5 1.2 1 2.5 1C7 18 7 16 9.5 16c2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1" />
+                            <path
+                                d="M2 7c.6.5 1.2 1 2.5 1C7 8 7 6 9.5 6c2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h4>Salt Deposit Removal</h4>
+                        <p>Specialist treatment to safely neutralise and remove corrosive salt deposits from the
+                            underbody, panels, and alloy wheels.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         SECTION 3 — CAR ACCESSORIES
+    ════════════════════════════════════════════ -->
+    <section class="section">
+        <div class="container">
+            <div style="text-align:center; margin-bottom:3.5rem;">
+                <div class="section-label" style="justify-content:center;">Masterpieces</div>
+                <h2 class="section-title">All Car Accessories Available</h2>
+                <p style="max-width:680px; margin:0 auto;">Turning Cars Into Masterpieces — from cutting-edge
+                    infotainment to bespoke interior customization, we have everything your vehicle deserves.</p>
+            </div>
+
+            <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap:1.5rem;">
+
+                <div class="svc-acc-card">
+                    <div class="svc-acc-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--clr-accent)"
+                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M9 18V5l12-2v13" />
+                            <circle cx="6" cy="18" r="3" />
+                            <circle cx="18" cy="16" r="3" />
+                        </svg>
+                    </div>
+                    <h3>Infotainment &amp; Audio System</h3>
+                    <p>Premium head units, DSP amplifiers, subwoofers, and OEM-grade displays. Seamless integration that
+                        transforms your cabin into a concert hall.</p>
+                </div>
+
+                <div class="svc-acc-card">
+                    <div class="svc-acc-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--clr-accent)"
+                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M20 9V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v10c0 1.1.9 2 2 2h3" />
+                            <path d="M14 13a2 2 0 0 1 2-2h6v7h-8v-5z" />
+                            <circle cx="17" cy="18" r="1" />
+                        </svg>
+                    </div>
+                    <h3>Car Seat Covers &amp; Interior Customization</h3>
+                    <p>Bespoke leather, leatherette, and fabric seat covers. Custom steering wraps, dashboard trims, and
+                        full cabin personalization.</p>
+                </div>
+
+                <div class="svc-acc-card">
+                    <div class="svc-acc-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--clr-accent)"
+                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5" />
+                            <path d="M9 18h6" />
+                            <path d="M10 22h4" />
+                        </svg>
+                    </div>
+                    <h3>Car Illumination</h3>
+                    <p>LED DRLs, HID headlights, ambient interior lighting, and underglow — precision-fitted for a
+                        striking, premium visual presence day and night.</p>
+                </div>
+
+                <div class="svc-acc-card">
+                    <div class="svc-acc-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--clr-accent)"
+                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z" />
+                            <circle cx="12" cy="13" r="4" />
+                        </svg>
+                    </div>
+                    <h3>Security Systems &amp; Dashcams</h3>
+                    <p>GPS trackers, 4K dashcams with parking mode, reversing cameras, and full alarm systems — complete
+                        peace of mind for your vehicle.</p>
+                </div>
+
+                <div class="svc-acc-card">
+                    <div class="svc-acc-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--clr-accent)"
+                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+                        </svg>
+                    </div>
+                    <h3>Performance &amp; Styling Enhancements</h3>
+                    <p>Sport body kits, alloy wheels, spoilers, carbon fibre trims, and performance exhaust fitments —
+                        engineered for impact and precision.</p>
+                </div>
+
+                <div class="svc-acc-card">
+                    <div class="svc-acc-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--clr-accent)"
+                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="7" width="20" height="14" rx="2" />
+                            <path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2" />
+                            <line x1="12" y1="12" x2="12" y2="16" />
+                            <line x1="10" y1="14" x2="14" y2="14" />
+                        </svg>
+                    </div>
+                    <h3>Travel &amp; Utility Accessories</h3>
+                    <p>Roof carriers, boot organizers, car care kits, tyre inflators, and a full range of utility
+                        accessories for every journey.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html">
+                        <img src="logo.jpg" alt="Dhuruv Detailing Studio" class="footer-logo-img">
+                    </a>
+                    <p>Chennai's most premium automotive detailing studio. Where perfection meets passion, every single
+                        time.</p>
+                </div>
+                <div class="footer-nav">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="shop.html">Services</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact</h4>
+                    <p>No.56A, Tharamani 100 ft Road,<br>Velachery Link Road,<br>Chennai – 600 113</p>
+                    <p style="margin-top:0.6rem;"><a href="tel:9790806404" style="color:var(--clr-sub);">97908 06404</a>
+                        &nbsp;|&nbsp; <a href="tel:9445235706" style="color:var(--clr-sub);">94452 35706</a></p>
+                    <p style="margin-top:0.4rem;"><a href="mailto:dhuruvcaraccessories@gmail.com"
+                            style="color:var(--clr-sub);">dhuruvcaraccessories@gmail.com</a></p>
+                    <p style="margin-top:0.4rem;"><a href="https://dhuruvcaraccessories.in" target="_blank"
+                            style="color:var(--clr-accent);">dhuruvcaraccessories.in</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Dhuruv Detailing Studio. All rights reserved.</p>
+                <p>Arrive Ordinary. Depart Exceptional. ✨</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // ─── Navbar scroll ───
+        const nav = document.getElementById('mainNav');
+        window.addEventListener('scroll', () => {
+            nav.classList.toggle('scrolled', window.scrollY > 60);
+        });
+
+        // ─── Mobile menu ───
+        function toggleMenu() {
+            document.getElementById('mobileMenu').classList.toggle('open');
+        }
+    </script>
+</body>
+
+</html>
