@@ -1,0 +1,11 @@
+# Sensitive credentials
+config.php
+
+# PHP related
+vendor/
+composer.lock
+.env
+
+# OS related
+.DS_Store
+Thumbs.db

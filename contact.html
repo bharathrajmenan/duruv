@@ -19,7 +19,7 @@
     <nav class="navbar" id="mainNav">
         <div class="nav-container">
             <a href="index.html" class="logo">
-                <img src="logo.jpg" alt="Dhuruv Detailing Studio" class="nav-logo-img">
+                <img src="images/logo.jpg" alt="Dhuruv Detailing Studio" class="nav-logo-img">
             </a>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
@@ -36,7 +36,7 @@
 
     <!-- Mobile Menu -->
     <div class="mobile-menu" id="mobileMenu">
-        <span class="mobile-close" onclick="toggleMenu()">✕</span>
+        <span class="mobile-close" onclick="toggleMenu()">âœ•</span>
         <a href="index.html" onclick="toggleMenu()">Home</a>
         <a href="about.html" onclick="toggleMenu()">About Us</a>
         <a href="shop.html" onclick="toggleMenu()">Services</a>
@@ -46,8 +46,7 @@
 
     <!-- Page Header -->
     <header class="page-header" style="height: 40vh;">
-        <div class="page-header-bg"
-            style="background-image: url('https://images.unsplash.com/photo-1549399542-7e3f8b79c341?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');">
+        <div class="page-header-bg" style="background-image: url('images/contact-header.jpg');">
         </div>
         <div class="container" style="position: relative; z-index: 2;">
             <div class="section-label">Connect With Us</div>
@@ -67,14 +66,14 @@
 
                 <div class="contact-item" style="margin-top: 3rem;">
                     <h4>Visit Us</h4>
-                    <p>No.56A, Tharamani 100 ft Road,<br>Velachery Link Road,<br>Chennai – 600 113</p>
+                    <p>No.56A, Tharamani 100 ft Road,<br>Velachery Link Road,<br>Chennai â€“ 600 113</p>
                 </div>
 
                 <div class="contact-item">
                     <h4>Concierge Direct Line</h4>
                     <p><a href="tel:9790806404" style="color:inherit;">97908 06404</a><br><a href="tel:9445235706"
                             style="color:inherit;">94452 35706</a><br><span
-                            style="font-size:0.8rem;color:var(--clr-sub);">(Mon – Sun: 9:00 AM – 8:00 PM)</span></p>
+                            style="font-size:0.8rem;color:var(--clr-sub);">(Mon â€“ Sun: 9:00 AM â€“ 8:00 PM)</span></p>
                 </div>
 
                 <div class="contact-item">
@@ -104,13 +103,17 @@
                 <!-- Success message (hidden by default) -->
                 <div id="formSuccess"
                     style="display:none; background:rgba(255,69,0,0.1); border:1px solid rgba(255,69,0,0.4); border-radius:4px; padding:1.5rem 2rem; margin-bottom:2rem; text-align:center;">
-                    <div style="font-size:2rem; margin-bottom:0.5rem;">✅</div>
+                    <div style="font-size:2rem; margin-bottom:0.5rem;">âœ…</div>
                     <h4 style="color:var(--clr-accent); margin-bottom:0.4rem;">Inquiry Received!</h4>
                     <p style="color:var(--clr-sub); font-size:0.9rem;">Thank you! Our team will contact you within 24
                         hours.</p>
                 </div>
 
-                <form id="inquiryForm" novalidate>
+                <form id="inquiryForm" action="send.php" method="POST" novalidate>
+                    <!-- Honeypot Field for Spam Protection -->
+                    <div style="display:none;">
+                        <label>Leave this empty: <input type="text" name="cf-bot" id="cf-bot"></label>
+                    </div>
 
                     <div class="cform-row">
                         <div class="cform-group">
@@ -143,7 +146,7 @@
                         <label class="cform-label" for="cf-service">Service Required <span
                                 style="color:var(--clr-accent);">*</span></label>
                         <select class="cform-input cform-select" id="cf-service" name="cf-service" required>
-                            <option value="" disabled selected>Select a service…</option>
+                            <option value="" disabled selected>Select a serviceâ€¦</option>
                             <optgroup label="Protection &amp; Coatings">
                                 <option>Ceramic Coating</option>
                                 <option>Graphene Coating</option>
@@ -174,14 +177,32 @@
                     <div class="cform-group">
                         <label class="cform-label" for="cf-message">Additional Message</label>
                         <textarea class="cform-input cform-textarea" id="cf-message" name="cf-message"
-                            placeholder="Any specific requirements, preferred appointment time, or questions…"
+                            placeholder="Any specific requirements, preferred appointment time, or questionsâ€¦"
                             rows="4"></textarea>
                     </div>
 
-                    <button type="submit" class="btn btn-primary" style="width:100%; font-size:1rem; margin-top:0.5rem;"
-                        id="cf-submit">
-                        Send Inquiry
-                    </button>
+                    <div style="display: flex; gap: 1rem; margin-top: 1rem;">
+                        <button type="submit" class="btn btn-primary"
+                            style="flex: 1; font-size: 1rem; position: relative; display: flex; justify-content: center; align-items: center;"
+                            id="cf-submit">
+                            <span id="cf-submit-text">Send Email</span>
+                            <div class="form-spinner" id="cf-spinner" style="display: none;"></div>
+                        </button>
+                        <button type="button" class="btn"
+                            style="flex: 1; font-size: 1rem; background-color: #25D366; color: white; border: none; display: flex; align-items: center; justify-content: center; gap: 0.5rem; cursor: pointer; transition: background 0.3s;"
+                            id="cf-whatsapp" onmouseover="this.style.backgroundColor='#20b858'"
+                            onmouseout="this.style.backgroundColor='#25D366'">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+                            </svg>
+                            WhatsApp Us
+                        </button>
+                    </div>
+
+                    <div id="formError"
+                        style="display:none; color: #ff4d4d; margin-top: 1rem; text-align: center; font-size: 0.9rem;">
+                    </div>
 
                 </form>
             </div>
@@ -211,7 +232,7 @@
             <div class="footer-grid">
                 <div class="footer-brand">
                     <a href="index.html">
-                        <img src="logo.jpg" alt="Dhuruv Detailing Studio" class="footer-logo-img">
+                        <img src="images/logo.jpg" alt="Dhuruv Detailing Studio" class="footer-logo-img">
                     </a>
                     <p>Chennai's most premium automotive detailing studio. Where perfection meets passion, every single
                         time.</p>
@@ -228,7 +249,7 @@
                 </div>
                 <div class="footer-contact">
                     <h4>Contact</h4>
-                    <p>No.56A, Tharamani 100 ft Road,<br>Velachery Link Road,<br>Chennai – 600 113</p>
+                    <p>No.56A, Tharamani 100 ft Road,<br>Velachery Link Road,<br>Chennai â€“ 600 113</p>
                     <p style="margin-top:0.6rem;"><a href="tel:9790806404" style="color:var(--clr-sub);">97908 06404</a>
                         &nbsp;|&nbsp; <a href="tel:9445235706" style="color:var(--clr-sub);">94452 35706</a></p>
                     <p style="margin-top:0.4rem;"><a href="mailto:dhuruvcaraccessories@gmail.com"
@@ -238,74 +259,132 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>© 2026 Dhuruv Detailing Studio. All rights reserved.</p>
-                <!-- <p>Arrive Ordinary. Depart Exceptional. ✨</p> -->
+                <p>Â© 2026 Dhuruv Detailing Studio. All rights reserved.</p>
+                <!-- <p>Arrive Ordinary. Depart Exceptional. âœ¨</p> -->
             </div>
         </div>
     </footer>
 
+    <!-- Floating WhatsApp Icon -->
+    <!-- <a href="https://wa.me/919790806404?text=Hello%20Dhuruv%20Detailing%20Studio!%20I%20would%20like%20to%20know%20more%20about%20your%20services." class="wa-float" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+        </svg>
+    </a> -->
+
     <script>
-        // ─── Navbar scroll ───
+        // â”€â”€â”€ Navbar scroll â”€â”€â”€
         const nav = document.getElementById('mainNav');
         window.addEventListener('scroll', () => {
             nav.classList.toggle('scrolled', window.scrollY > 60);
         });
 
-        // ─── Mobile menu ───
+        // ——— Mobile menu ———
         function toggleMenu() {
             document.getElementById('mobileMenu').classList.toggle('open');
         }
 
-        // ─── Contact Form → Google Forms submission ───
-        // HOW TO CONNECT YOUR GOOGLE FORM:
-        // 1. Open your Google Form and click the 3-dot menu → "Get pre-filled link"
-        // 2. Fill each field with a dummy value and click "Get Link"
-        // 3. The URL will contain entry.XXXXXXXXX=value for each field
-        // 4. Replace the entry IDs below with your actual field entry IDs
-        const GOOGLE_FORM_ACTION = 'https://docs.google.com/forms/d/e/1FAIpQLSc6a0PsSw5KW7AsjZsPNHAeyr3zEGMCSs30lMapwQHVJMAX_w/formResponse';
-        const FIELD_IDS = {
-            name: 'entry.1000000001',   // Replace with your Name field entry ID
-            phone: 'entry.1000000002',   // Replace with your Phone field entry ID
-            email: 'entry.1000000003',   // Replace with your Email field entry ID
-            car: 'entry.1000000004',   // Replace with your Car Model field entry ID
-            service: 'entry.1000000005',   // Replace with your Service field entry ID
-            message: 'entry.1000000006'    // Replace with your Message field entry ID
-        };
-
+        // ─── Contact Form → PHP AJAX Submission ───
         document.getElementById('inquiryForm').addEventListener('submit', async function (e) {
-            e.preventDefault();
-            const btn = document.getElementById('cf-submit');
-            const form = this;
+            e.preventDefault(); // Stop default redirect
 
-            // Basic validation
+            const form = e.target;
+            const errorDiv = document.getElementById('formError');
+            errorDiv.style.display = 'none';
+            errorDiv.textContent = '';
+
+            // Basic frontend validation
             const name = document.getElementById('cf-name').value.trim();
             const phone = document.getElementById('cf-phone').value.trim();
             const service = document.getElementById('cf-service').value;
+            const email = document.getElementById('cf-email').value.trim();
+
             if (!name || !phone || !service) {
-                alert('Please fill in your Name, Phone Number, and Service Required.');
+                errorDiv.textContent = 'Please fill in your Name, Phone Number, and Service Required.';
+                errorDiv.style.display = 'block';
                 return;
             }
 
-            btn.textContent = 'Sending…';
+            if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+                errorDiv.textContent = 'Please enter a valid Email Address.';
+                errorDiv.style.display = 'block';
+                return;
+            }
+
+            const btn = document.getElementById('cf-submit');
+            const btnText = document.getElementById('cf-submit-text');
+            const spinner = document.getElementById('cf-spinner');
+
+            btnText.style.display = 'none';
+            spinner.style.display = 'block';
             btn.disabled = true;
 
-            // Build form data
-            const body = new FormData();
-            body.append(FIELD_IDS.name, name);
-            body.append(FIELD_IDS.phone, phone);
-            body.append(FIELD_IDS.email, document.getElementById('cf-email').value.trim());
-            body.append(FIELD_IDS.car, document.getElementById('cf-car').value.trim());
-            body.append(FIELD_IDS.service, service);
-            body.append(FIELD_IDS.message, document.getElementById('cf-message').value.trim());
+            const formData = new FormData(form);
 
-            // Submit silently (no-cors — Google Forms receives data, CORS error is expected & harmless)
             try {
-                await fetch(GOOGLE_FORM_ACTION, { method: 'POST', body: body, mode: 'no-cors' });
-            } catch (_) { /* no-cors always throws, that's normal */ }
+                const response = await fetch('send.php', {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
 
-            // Show success state
-            form.style.display = 'none';
-            document.getElementById('formSuccess').style.display = 'block';
+                let result;
+                try {
+                    result = await response.json();
+                } catch (jsonErr) {
+                    throw new Error('Server returned an invalid response. Please try again.');
+                }
+
+                if (response.ok && result.status === 'success') {
+                    // Show success state smoothly
+                    form.style.display = 'none';
+                    document.getElementById('formSuccess').style.display = 'block';
+                } else {
+                    errorDiv.textContent = result.message || 'There was a problem submitting your form.';
+                    errorDiv.style.display = 'block';
+                    btnText.style.display = 'block';
+                    spinner.style.display = 'none';
+                    btn.disabled = false;
+                }
+            } catch (error) {
+                errorDiv.textContent = error.message || 'Network error. Please try again or use WhatsApp.';
+                errorDiv.style.display = 'block';
+                btnText.style.display = 'block';
+                spinner.style.display = 'none';
+                btn.disabled = false;
+            }
+        });
+
+        // ─── Contact Form → WhatsApp Redirection ───
+        document.getElementById('cf-whatsapp').addEventListener('click', function () {
+            const name = document.getElementById('cf-name').value.trim() || '[Not Provided]';
+            const phone = document.getElementById('cf-phone').value.trim() || '[Not Provided]';
+            const car = document.getElementById('cf-car').value.trim() || '[Not Provided]';
+            const service = document.getElementById('cf-service').value || '[Not Provided]';
+            const message = document.getElementById('cf-message').value.trim() || '[No Message]';
+
+            // Check if user at least filled something basic, or just send anyway
+            if (name === '[Not Provided]' && phone === '[Not Provided]' && service === '[Not Provided]') {
+                alert('Please fill in your details first before sending via WhatsApp.');
+                return;
+            }
+
+            // Construct the WhatsApp message text
+            let waText = `Hello Dhuruv Detailing Studio, I have a new service inquiry:%0A%0A`;
+            waText += `Name: ${name}%0A`;
+            waText += `Phone: ${phone}%0A`;
+            waText += `Car Details: ${car}%0A`;
+            waText += `Service: ${service}%0A`;
+            waText += `Message: ${message}`;
+
+            // Replace with the actual studio WhatsApp number (use international format without +)
+            const waNumber = '9790806404';
+            const waUrl = `https://wa.me/${waNumber}?text=${waText}`;
+
+            // Redirect to WhatsApp
+            window.open(waUrl, '_blank');
         });
     </script>
 </body>
