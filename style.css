@@ -1061,6 +1061,7 @@ img {
     z-index: 10;
     max-width: 1000px;
     padding: 0 2rem;
+    line-height:7;
 }
 
 .hero-eyebrow {
@@ -1085,10 +1086,11 @@ img {
 } */
 
 
-.hero-headline {
+.hero-headline span{
     text-align: center;
     font-family: var(--font-display);
     text-transform: uppercase;
+    margin-bottom:15px;
 }
 
 /* FORCE single line */
@@ -1097,8 +1099,6 @@ img {
     white-space: nowrap;
     font-size: clamp(1.5rem, 6vw, 7rem);
 }
-
-
 
 
 /* Next lines */
