@@ -174,7 +174,7 @@ img {
 .hamburger {
     display: none;
     flex-direction: column;
-    padding: 20px 40px 20px 40px;
+    padding: 10px;
     gap: 5px;
     cursor: pointer;
 }
