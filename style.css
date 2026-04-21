@@ -1104,7 +1104,7 @@ img {
     font-size: clamp(1.5rem, 6vw, 7rem);
   -webkit-text-stroke: 0.5px var(--clr-accent);
     color: transparent;
-    text-shadow: 0 0 40px rgba(255, 69, 0, 0.4);
+    text-shadow:  rgba(255, 69, 0, 0.4);
 }
 
 .bottom {
